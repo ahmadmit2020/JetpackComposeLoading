@@ -1,5 +1,6 @@
 package am.android.composeloading
 
+import am.android.composeloading.ui.loading.ArcRotationWithLogo
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -11,7 +12,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import am.android.composeloading.ui.theme.ComposeLoadingTheme
-import androidx.compose.ui.tooling.data.EmptyGroup.name
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.padding
+import androidx.compose.ui.unit.dp
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +36,17 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun HomeScreen() {
+    Column {
+        Row {
+            Column(
+                modifier = Modifier
+                    .padding(4.dp)
+                    .weight(1F, true)
+            ) {
+                ArcRotationWithLogo()
+            }
 
+        }
+    }
 }
 
