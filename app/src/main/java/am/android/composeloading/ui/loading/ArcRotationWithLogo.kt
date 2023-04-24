@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.asImageBitmap
@@ -29,7 +30,7 @@ fun ArcRotationWithLogo() {
     val infiniteTransition = rememberInfiniteTransition()
 
 
-    val arcColor = MaterialTheme.colorScheme.primary
+    val arcColor = Color(0XFF1B5E20)
     val arcAngle1 by infiniteTransition.animateFloat(
         initialValue = 0F,
         targetValue = 180F,
@@ -70,7 +71,7 @@ fun ArcRotationWithLogo() {
 val inset = with(LocalDensity.current) { 7.dp.toPx() }
     val bitmap = getBitmapFromImage(LocalContext.current, am.android.composeloading.R.drawable.logo , pxValue).asImageBitmap()
 
-    val colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.primary)
+    val colorFilter = ColorFilter.tint( Color(0XFF1B5E20))
     Box(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center

@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.asImageBitmap
@@ -28,7 +29,7 @@ fun ArcRotationAnimation() {
     val infiniteTransition = rememberInfiniteTransition()
 
 
-    val arcColor = MaterialTheme.colorScheme.primary
+    val arcColor = Color(0XFF880E4F)
     val arcAngle1 by infiniteTransition.animateFloat(
         initialValue = 0F,
         targetValue = 180F,

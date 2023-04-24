@@ -8,15 +8,21 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import am.android.composeloading.ui.theme.ComposeLoadingTheme
+import android.widget.GridLayout
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,81 +45,44 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun HomeScreen() {
     Scaffold(
-        bottomBar = {
+        topBar = {
             ElevatedCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(22.dp),
-                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primary),
-                shape = RoundedCornerShape(40),
-            ){ Text(
-                "Jetpack Compose Loading",
-                fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.onSecondary,
-                modifier = Modifier
-                    .padding(
-                        top = 24.dp,
-                        start = 16.dp,
-                        end = 16.dp,
-                        bottom = 24.dp
-                    )
-                    .fillMaxWidth()
-            )}
+                colors = CardDefaults.cardColors(containerColor = Color(0xFF37474F)),
+                shape = RoundedCornerShape(30),
+            ) {
+                Text(
+                    "Jetpack Compose Loading",
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.onSecondary,
+                    modifier = Modifier
+                        .padding(
+                            top = 24.dp,
+                            start = 16.dp,
+                            end = 16.dp,
+                            bottom = 24.dp
+                        )
+                        .fillMaxWidth()
+                )
+            }
         },
-        content ={innerPadding ->
-            Box(
-                contentAlignment = Alignment.Center,
-                modifier = Modifier.fillMaxSize().padding(innerPadding),
-                ){
-                Column {
-                    Row (){
-                        Column(
-                            modifier = Modifier
-                                .padding(4.dp)
-                                .weight(1F, true)
-                        ) {
-                            Box(
-                                modifier = Modifier.fillMaxSize(),
-                                contentAlignment = Alignment.Center
-                            ) {
-                                Text("Arc =>" , fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
-                            }
+        content = { innerPadding ->
+            Box(modifier = Modifier.padding(innerPadding)) {
+                LazyVerticalGrid(
+                    columns = GridCells.Adaptive(minSize = 128.dp)
+                ) {
+                    items(4) { photo ->
+                        when (photo) {
+                            0 -> SimpleArcRotation()
+                            1 -> ArcRotationAnimation()
+                            2 -> ArcRotationWithLogo()
+                            3 -> RotateBasket()
                         }
-                        Column(
-                            modifier = Modifier
-                                .padding(4.dp)
-                                .weight(1F, true)
-                        ) {
-                            SimpleArcRotation()
-                        }
-                        Column(
-                            modifier = Modifier
-                                .padding(4.dp)
-                                .weight(1F, true)
-                        ) {
-                            ArcRotationAnimation()
-                        }
-                        Column(
-                            modifier = Modifier
-                                .padding(4.dp)
-                                .weight(1F, true)
-                        ) {
-                            ArcRotationWithLogo()
-                        }
-                        Column(
-                            modifier = Modifier
-                                .padding(4.dp)
-                                .weight(1F, true)
-                        ) {
-                            ArcRotationWithScale()
-                        }
-
-
                     }
                 }
-
             }
         }
     )
 }
-
