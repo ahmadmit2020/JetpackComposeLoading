@@ -78,7 +78,7 @@ fun HomeScreen() {
                             0 -> SimpleArcRotation()
                             1 -> ArcRotationAnimation()
                             2 -> ArcRotationWithLogo()
-                            3 -> RotateBasket()
+//                            3 -> RotateBasket()
                         }
                     }
                 }

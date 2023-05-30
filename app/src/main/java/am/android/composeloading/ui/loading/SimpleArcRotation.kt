@@ -63,7 +63,7 @@ fun SimpleArcRotation() {
                 startAngle = arcAngle1,
                 sweepAngle = 90f,
                 useCenter = false,
-                style = Stroke(width = 6f, cap = StrokeCap.Round),
+                style = Stroke(width = 9f, cap = StrokeCap.Round),
             )
 
             drawArc(
@@ -71,7 +71,7 @@ fun SimpleArcRotation() {
                 startAngle = arcAngle2,
                 sweepAngle = 90f,
                 useCenter = false,
-                style = Stroke(width = 6f, cap = StrokeCap.Round),
+                style = Stroke(width = 9f, cap = StrokeCap.Round),
 
             )
         }
