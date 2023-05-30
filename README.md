@@ -5,7 +5,8 @@ Repository That Contains Jetpack Compose Loading Animations
  <td align="center">
       <img src="https://github.com/ahmadmit2020/JetpackComposeLoading/blob/master/screen/screen.gif" width="360px">
    </td>
-   
+   https://user-images.githubusercontent.com/6877923/115474571-03c75800-a23e-11eb-8096-8973aad5fa9f.mp4
+
    `#android`,`#jetpack`,`#compose`,`#loading`,`#progressbar`
    
 # Bugs and Feedback
