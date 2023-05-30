@@ -1,6 +1,10 @@
 # JetpackComposeLoading
 Repository That Contains Jetpack Compose Loading Animations
 
+
+https://github.com/ahmadmit2020/JetpackComposeLoading/assets/61660033/336e267a-e366-418a-9350-fb9c7c111a9f
+
+
 # Showcase
  <td align="center">
       <img src="https://github.com/ahmadmit2020/JetpackComposeLoading/blob/master/screen/screen.gif" width="360px">
@@ -10,7 +14,8 @@ Repository That Contains Jetpack Compose Loading Animations
    
 # Bugs and Feedback
 For bugs, questions and discussions please use the [Github Issues](https://github.com/ahmadmit2020/JetpackComposeLoading/issues).
-https://user-images.githubusercontent.com/6877923/115474571-03c75800-a23e-11eb-8096-8973aad5fa9f.mp4
+
+
 
  # Thanks
 Special thanks to 
